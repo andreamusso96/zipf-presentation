@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Zipf</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -39,62 +39,41 @@
 			<div class="slides">
 				<section>
 					<span class="r-fit-text">
-						<span class="fragment highlight-blue"> Global Human Settlement Layer </span> cities
+						<span class="fragment highlight-blue"> Globalization </span> and city growth
 					</span>
 				</section>
 				<section>
-					<div class="r-fit-text"> Procedure and Dataset </div>
+					<div> Large cities are uniquely positioned to reap benefits </div>
 					<br>
 					<div align="left">
 					<ul>
-					  <li class="fragment spotlight">DBSCAN (or CCA) over settlement layer data</li>
-					  <li class="fragment spotlight">Match with population layer data</li>
-					  <li class="fragment spotlight">Geocode with world map (extension: Nominatim API)</li>
-						<li class="fragment spotlight">All world cities with population and country</li>
-						<li class="fragment spotlight">Consistent definition of city and area</li>
-						<li class="fragment spotlight">Span over 55 years (1975-2025)</li>
+					  <li class="fragment spotlight">Urban system size constrains city size</li>
+					  <li class="fragment spotlight">Large cities have better network position </li>
+					  <li class="fragment spotlight">Large cities leverage better complementarities</li>
 					</ul>
 					</div>
 				</section>
-				<section data-background-iframe="assets/cities_1990.html"  data-background-interactive data-preload> </section>
-				<section data-background-iframe="assets/population_distribution_1990.html"  data-background-interactive data-preload> </section>
+				<section data-background-iframe="assets/6-12-2023/fig_zipf.html"  data-background-interactive data-preload> </section>
+				<section data-background-iframe="assets/6-12-2023/fig_bar_countries.html"  data-background-interactive data-preload> </section>
 				<section>
-					<div class="r-fit-text"> Basic questions </div>
+					Why did large cities not <span class="fragment highlight-blue"> grow </span> to fit the <span class="fragment highlight-blue"> global urban system? </span>
 					<br>
-					<div align="left">
-					<ul>
-						<li class="fragment spotlight">What is the distribution of city sizes across the world?</li>
-					  <li class="fragment spotlight">Does the population distribution of world cities follow Zipf's law?</li>
-					  <li class="fragment spotlight">What is the relation between the number of cities in a country and the size of its largest city?</li>
-						<li class="fragment spotlight">Joining k small countries yields the same city distribution as a big country? </li>
-					</ul>
-					</div>
+					<span class="fragment"> Are they maybe still growing? </span>
 				</section>
-				<section data-background-iframe="assets/zipf_regression_1990_cutoff_10K.html"  data-background-interactive data-preload> </section>
-				<section data-background-iframe="assets/zipf_regression_1990_cutoff_1M.html"  data-background-interactive data-preload> </section>
-				<section data-background-iframe="assets/n_cities_vs_largest_city_1990_cutoff_30.html"  data-background-interactive data-preload> </section>
-				<section data-background-iframe="assets/zipf_exponent_by_country_1990_order_by_exponent.html"  data-background-interactive data-preload> </section>
-				<section data-background-iframe="assets/zipf_exponent_by_country_1990_order_by_n_cities.html"  data-background-interactive data-preload> </section>
-				<section data-background-iframe="assets/zipf_regression_largest_countries_1990.html"  data-background-interactive data-preload> </section>
+				<section data-background-iframe="assets/6-12-2023/fig_bar_years.html"  data-background-interactive data-preload> </section>
+				<section data-background-iframe="assets/6-12-2023/fig_largest_city_share_y1_y2.html"  data-background-interactive data-preload> </section>
+				<section data-background-iframe="assets/6-12-2023/fig_europe_1990_2020.html"  data-background-interactive data-preload> </section>
 				<section>
-					<div class="r-fit-text"> More advanced question </div>
-					<br>
-					<div align="left">
-					<ul>
-						<li class="fragment spotlight"> Relation between Zipf's exponents and economic development</li>
-					  <li class="fragment spotlight">Gibrat's law and city growth</li>
-					  <li class="fragment spotlight">What happens to the city size distribution when we remove/add borders (Germany/Yugoslavia)</li>
-						<li class="fragment spotlight">Urbanization in the developing world ...</li>
-					</ul>
-					</div>
+					Counterintuitively, <span class="fragment"> small cities grew the most </span>
 				</section>
+				<section data-background-iframe="assets/6-12-2023/fig_growth.html"  data-background-interactive data-preload> </section>
 				<section>
-					<div class="r-fit-text"> Problem: How to assign unique historical identifiers to cities? </div>
-					<img src="assets/laws_pop_growth.jpeg" width="65%">
+					Discussion
 					<div align="left">
 					<ul>
-						<li class="fragment spotlight"> Crosswalk--Match cluster with intersecting clusters </li>
-						<li class="fragment spotlight"> Merges and splits </li>
+						<li class="fragment spotlight"> Globalization swelled small cities  </li>
+						<li class="fragment spotlight"> Large variance (winners and losers) </li>
+						<li class="fragment spotlight"> Housing prices have skyrocketed </li>
 					</ul>
 					</div>
 				</section>

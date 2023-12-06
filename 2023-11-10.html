@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style type="text/css">
+			  .fragment.spotlight {
+				transform: translateY(100px);
+				  transform-origin: 0 0;
+			  }
+			  .fragment.spotlight.visible {
+				transform: none;
+				  color: #555
+			  }
+			  .fragment.spotlight.current-fragment {
+				transform: scale(1.5);
+				  color: white;
+			  }
+			  .box {
+				padding: 10px; /* Some padding inside the box */
+				box-sizing: border-box; /* To include padding in the box's width */
+				margin: 10px 0; /* Margin for spacing */
+				text-align: center; /* To center text inside the box */
+			  }
+
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<span class="r-fit-text">
+						<span class="fragment highlight-blue"> Global Human Settlement Layer </span> cities
+					</span>
+				</section>
+				<section>
+					<div class="r-fit-text"> Procedure and Dataset </div>
+					<br>
+					<div align="left">
+					<ul>
+					  <li class="fragment spotlight">DBSCAN (or CCA) over settlement layer data</li>
+					  <li class="fragment spotlight">Match with population layer data</li>
+					  <li class="fragment spotlight">Geocode with world map (extension: Nominatim API)</li>
+						<li class="fragment spotlight">All world cities with population and country</li>
+						<li class="fragment spotlight">Consistent definition of city and area</li>
+						<li class="fragment spotlight">Span over 55 years (1975-2025)</li>
+					</ul>
+					</div>
+				</section>
+				<section data-background-iframe="assets/cities_1990.html"  data-background-interactive data-preload> </section>
+				<section data-background-iframe="assets/population_distribution_1990.html"  data-background-interactive data-preload> </section>
+				<section>
+					<div class="r-fit-text"> Basic questions </div>
+					<br>
+					<div align="left">
+					<ul>
+						<li class="fragment spotlight">What is the distribution of city sizes across the world?</li>
+					  <li class="fragment spotlight">Does the population distribution of world cities follow Zipf's law?</li>
+					  <li class="fragment spotlight">What is the relation between the number of cities in a country and the size of its largest city?</li>
+						<li class="fragment spotlight">Joining k small countries yields the same city distribution as a big country? </li>
+					</ul>
+					</div>
+				</section>
+				<section data-background-iframe="assets/zipf_regression_1990_cutoff_10K.html"  data-background-interactive data-preload> </section>
+				<section data-background-iframe="assets/zipf_regression_1990_cutoff_1M.html"  data-background-interactive data-preload> </section>
+				<section data-background-iframe="assets/n_cities_vs_largest_city_1990_cutoff_30.html"  data-background-interactive data-preload> </section>
+				<section data-background-iframe="assets/zipf_exponent_by_country_1990_order_by_exponent.html"  data-background-interactive data-preload> </section>
+				<section data-background-iframe="assets/zipf_exponent_by_country_1990_order_by_n_cities.html"  data-background-interactive data-preload> </section>
+				<section data-background-iframe="assets/zipf_regression_largest_countries_1990.html"  data-background-interactive data-preload> </section>
+				<section>
+					<div class="r-fit-text"> More advanced question </div>
+					<br>
+					<div align="left">
+					<ul>
+						<li class="fragment spotlight"> Relation between Zipf's exponents and economic development</li>
+					  <li class="fragment spotlight">Gibrat's law and city growth</li>
+					  <li class="fragment spotlight">What happens to the city size distribution when we remove/add borders (Germany/Yugoslavia)</li>
+						<li class="fragment spotlight">Urbanization in the developing world ...</li>
+					</ul>
+					</div>
+				</section>
+				<section>
+					<div class="r-fit-text"> Problem: How to assign unique historical identifiers to cities? </div>
+					<img src="assets/laws_pop_growth.jpeg" width="65%">
+					<div align="left">
+					<ul>
+						<li class="fragment spotlight"> Crosswalk--Match cluster with intersecting clusters </li>
+						<li class="fragment spotlight"> Merges and splits </li>
+					</ul>
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
