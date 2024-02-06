@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -22,7 +22,7 @@
 				  color: #555
 			  }
 			  .fragment.spotlight.current-fragment {
-				transform: scale(1.5);
+				transform: scale(1.1);
 				  color: white;
 			  }
 			  .box {
@@ -39,45 +39,140 @@
 			<div class="slides">
 				<section>
 					<span class="r-fit-text">
-						<span class="fragment highlight-blue"> Globalization </span> and city growth
+						The granular origins of <span class="fragment highlight-blue"> urban primacy </span>
 					</span>
 				</section>
 				<section>
-					<div> Large cities are uniquely positioned to reap benefits </div>
-					<br>
-					<div align="left">
+					<div> A <span class="fragment highlight-blue"> random growth process </span> underlies Zipf's law and its deviations </div>
+				</section>
+				<section>
+					<span class="fragment highlight-blue"> Data </span>
 					<ul>
-					  <li class="fragment spotlight">Urban system size constrains city size</li>
-					  <li class="fragment spotlight">Large cities have better network position </li>
-					  <li class="fragment spotlight">Large cities leverage better complementarities</li>
+						<li class="fragment spotlight"> US Places 1850-1940 (Census Microdata) </li>
+						<li class="fragment spotlight"> World cities 1975-2020 (Satellite Imagery) </li>
+					</ul>
+				</section>
+				<section data-background-iframe="assets/map_2020_PRT.html"  data-background-interactive data-preload> </section>
+				<section>
+					<span class="fragment highlight-blue"> Mean </span> and <span class="fragment highlight-blue"> standard deviation </span> of growth rates across city sizes
+					<span class="fragment">
+					\[g = \frac{\Delta P}{P} \]
+					</span>
+				</section>
+				<section>
+					<span class="fragment highlight-blue"> Mean </span> growth rates across city sizes
+				</section>
+				<section data-background-iframe="assets/mean_growth_rate_across_sizes_ipums.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/mean_growth_rate_across_sizes_cc.html"  data-background-interactive> </section>
+				<section>
+					<span class="fragment highlight-blue"> Standard deviation </span> of growth rates across city sizes
+				</section>
+				<section data-background-iframe="assets/std_growth_rate_across_sizes_ipums.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/std_growth_rate_across_sizes_cc.html"  data-background-interactive> </section>
+				<section> Three <span class="fragment highlight-blue"> stylized facts: </span>
+					<br>
+					<div>
+					<ul>
+					  <li class="fragment spotlight">Growth rates are upward sloping during urbanization</li>
+					  <li class="fragment spotlight">Growth rates are (relatively) flat after urbanization</li>
+						<li class="fragment spotlight">The standard deviation of growth rates is downward sloping</li>
 					</ul>
 					</div>
 				</section>
-				<section data-background-iframe="assets/6-12-2023/fig_zipf.html"  data-background-interactive data-preload> </section>
-				<section data-background-iframe="assets/6-12-2023/fig_bar_countries.html"  data-background-interactive data-preload> </section>
 				<section>
-					Why did large cities not <span class="fragment highlight-blue"> grow </span> to fit the <span class="fragment highlight-blue"> global urban system? </span>
+					<span class="fragment highlight-blue"> Claim: </span> <span class="fragment"> Empirical considerations about firm dynamics </span> <span class="fragment"> are <span class="fragment highlight-blue"> sufficient </span> to explain these stylized facts </span>
+				</section>
+				<section>
+					Consider <span class="fragment"> a city $c$ with population $P$ </span>
 					<br>
-					<span class="fragment"> Are they maybe still growing? </span>
-				</section>
-				<section data-background-iframe="assets/6-12-2023/fig_bar_years.html"  data-background-interactive data-preload> </section>
-				<section data-background-iframe="assets/6-12-2023/fig_largest_city_share_y1_y2.html"  data-background-interactive data-preload> </section>
-				<section data-background-iframe="assets/6-12-2023/fig_europe_1990_2020.html"  data-background-interactive data-preload> </section>
-				<section>
-					Counterintuitively, <span class="fragment"> small cities grew the most </span>
-				</section>
-				<section data-background-iframe="assets/6-12-2023/fig_growth.html"  data-background-interactive data-preload> </section>
-				<section>
-					Discussion
-					<div align="left">
-					<ul>
-						<li class="fragment spotlight"> Globalization swelled small cities  </li>
-						<li class="fragment spotlight"> Large variance (winners and losers) </li>
-						<li class="fragment spotlight"> Housing prices have skyrocketed </li>
-					</ul>
-					</div>
+					<span class="fragment"> Firms $1, 2, \ldots, N$ with sizes $F_1, F_2, \ldots, F_N$ employ the city's population </span>
+					<span class="fragment">
+					\[P = \sum_{i \leq N}F_i \]
+					</span>
 				</section>
 
+				<section>
+					Firms grow according to a <span class="fragment highlight-blue"> random growth process </span>
+				<span class="fragment spotlight"> \[\frac{\Delta F_i}{F_i} = \sigma(F_i)V + \mu(F_i) \] </span>
+					<span class="fragment"> Then </span>
+					<span class="fragment spotlight">
+					\[\frac{\Delta P}{P} = \frac{1}{P}\sum_{i \leq N}F_i\frac{\Delta F_i}{F_i} = \sum_{i \leq N} \sigma(F_i)F_iV + \mu(F_i) F_i \]
+					</span>
+				</section>
+				<section>
+					Firms volatility is <span class="fragment highlight-blue"> decreasing </span> in size $\sigma(F_i) = \sigma F_i^{-\gamma}$
+					<span class="fragment"> and firms are <span class="fragment highlight-blue"> power law distributed </span> with exponent $\alpha$ </span>
+					<span class="fragment spotlight">
+					\[\frac{\Delta P}{P} = \frac{1}{P} \sum_{i \leq N} \sigma F_i^{1-\gamma} V + \mu(F_i) F_i \]
+					</span>
+					<span class="fragment"> By <span class="fragment highlight-blue"> generalized central limit theorem </span> (for $\alpha > 1$) </span>
+					<span class="fragment spotlight">
+					\[ \frac{\Delta P}{P} = \sigma C_{\alpha, \gamma, V} P_t^{\frac{1-\gamma}{\alpha} - 1}S_{\frac{\alpha}{1-\gamma}} + \sum_{i \leq N} \mu(F_i) \frac{F_i}{P} \]
+					</span>
+				</section>
+				<section>
+					<span class="fragment spotlight">
+					\[ \frac{\Delta P}{P} = \sigma C_{\alpha, \gamma, V} P_t^{\frac{1-\gamma}{\alpha} - 1}S_{\frac{\alpha}{1-\gamma}} + \sum_{i \leq N} \mu(F_i) \frac{F_i}{P} \]
+					</span>
+					<span class="fragment spotlight">
+					\[ \frac{\Delta P}{P} = \sigma C_{\alpha, \gamma, V} P_t^{\frac{1-\gamma}{\alpha} - 1}S_{\frac{\alpha}{1-\gamma}}\]
+					</span>
+					<span class="fragment spotlight">
+					\[ \frac{\Delta P}{P} = \sum_{i \leq N} \mu(F_i) \frac{F_i}{P} \]
+					</span>
+				</section>
+				<section>
+					Growth rates should follow a <span class="fragment highlight-blue"> stable distribution </span>
+					<span class="fragment spotlight">
+					\[ S_{\frac{\alpha}{1-\gamma}}\]
+					</span>
+				</section>
+				<section data-background-iframe="assets/growth_rate_vs_levy_fit_ipums_1850_1900.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/growth_rate_vs_levy_fit_ipums_1850_1900.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/growth_rate_vs_levy_fit_cc_urb.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/growth_rate_vs_levy_fit_cc_non_urb.html"  data-background-interactive> </section>
+				<section>
+					Mean growth rates <span class="fragment highlight-blue"> forecast </span>
+					<span class="fragment">\[ \sum_{i \leq N} \mu(F_i) \frac{F_i}{P} \] </span>
+				</section>
+				<section data-background-iframe="assets/growth_vs_structural_growth_1850_1900.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/growth_vs_structural_growth_1900_1940.html"  data-background-interactive> </section>
+				<section>
+					The <span class="fragment highlight-blue">distribution of sector sizes</span> in a city is dispersed <span class="fragment">, but not power law </span>
+				</section>
+				<section data-background-iframe="assets/sector_sizes_1900.html"  data-background-interactive> </section>
+				<section>
+					Implications for <span class="fragment highlight-blue"> Zipf exponents </span> (WIP)
+				</section>
+				<section>
+					<br>
+					<span class="fragment spotlight">If $\mu(F_i) = \mu F_i^{-\beta}$, then $E[\Delta P / P] \approx \mu C P^{-\beta}$ </span>
+					<span class="fragment spotlight">
+						\[ \sum_{i \leq N} \mu(F_i) \frac{F_i}{P} \approx \frac{\mu}{P} \sum_{i \leq N} F_i^{1-\beta} \approx \mu C P^{-\beta} \]
+					</span>
+					<span class="fragment spotlight">
+						\[ \frac{P_{it+1}}{P_{jt+1}} = \frac{1 + \gamma_{it}}{1 + \gamma_{jt}} \frac{P_{it}}{P_{jt}}\approx \frac{\gamma_{it}}{\gamma_{jt}} \frac{P_{it}}{P_{jt}} \approx  \Big(\frac{P_{it}}{P_{jt}} \Big)^{1-\beta}\]
+					</span>
+					<span class="fragment spotlight">
+						\[ \zeta_{t+1} = \frac{\zeta_t}{1-\beta} \]
+					</span>
+				</section>
+				<section>
+					<div>
+						Parameters
+					<ul>
+						<li class="fragment spotlight">$\gamma$ = decay of standard deviation with firm size
+					  <li class="fragment spotlight">$\alpha$ = power law distribution of firm sizes
+						<li class="fragment spotlight">$\beta$ = decay of mean growth rate with size
+						</ul>
+						<span class="fragment"> Discussion </span>
+						<ul>
+						<li class="fragment spotlight">$\beta = 0$, then $\zeta = \frac{\alpha}{1 - \gamma}$
+						<li class="fragment spotlight">Agriculture (high $\alpha, \gamma$), Manufacturing (low $\alpha, \gamma$)
+						<li class="fragment spotlight">$\beta \not = 0$, then $\zeta_{t+1} = \zeta_t \frac{1}{1-\beta}$
+						<li class="fragment spotlight">Globalization (low $\beta$), Urbanization (high $\beta$)
+					</ul>
+				</section>
 			</div>
 		</div>
 
@@ -85,6 +180,7 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -93,7 +189,7 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
 			});
 		</script>
 	</body>
