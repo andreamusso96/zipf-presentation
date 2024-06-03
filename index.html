@@ -38,42 +38,37 @@
 		<div class="reveal">
 			<div class="slides">
 				<section data-background-color="black">
-				<span class="fragment highlight-blue">Sub-city </span> level productivity spillovers
+					City <span class="fragment highlight-blue"> mobility </span> across the urban hierarchy
+				</section>
+				<section data-background-iframe="assets/2-04-2024/zipf_china_1990.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/zipf_nigeria_2010.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/zipf_saudi_2020.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/zipf_plot_usa_1880.html"  data-background-interactive> </section>
+				<section data-background-color="black">
+					<div>
+					Explanation: <span class="fragment highlight-blue"> proportional growth </span>
+					</div>
+					<br>
+					<div>
+						<span class="fragment"> $P_{t+1} = (1 + \gamma) \cdot P_t$  </span>
+					</div>
+					<div>
+						<span class="fragment"> $\gamma$ independent of $P$  </span>
+					</div>
 				</section>
 				<section data-background-color="white">
-					<div>
-						<img src="assets/2-04-2024/madison.png" width="50%">
+					<div class="fragment">
+						<img src="assets/3-6-2024/simon.png" width="40%">
 					</div>
 					<div class="fragment">
-						<img src="assets/2-04-2024/berlin.png" width="50%">
+						<img src="assets/3-6-2024/gabaix.png" width="40%">
 					</div>
 					<div class="fragment">
-						<img src="assets/2-04-2024/silicon_valley.png" width="50%">
+						<img src="assets/3-6-2024/barthelemy.png" width="40%">
 					</div>
-				</section>
-				<section data-background-color="black">
-					<div>
-						Sub-city level datasets
+					<div class="fragment">
+						<img src="assets/3-6-2024/bettencourt.png" width="40%">
 					</div>
-					<br>
-					<ul>
-						<li class="fragment spotlight"> Mobility: Spectus GPS traces 2019-2022 (SUN Lab) </li>
-						<li class="fragment spotlight"> Productivity: Dun & Bradstreet 2019-2022 (Growth Lab)</li>
-					</ul>
-				</section>
-				<section data-background-iframe="http://estebanmoro.org/categories/publications/"> </section>
-				<section data-background-color="black">
-					<div>
-						Obstacle: Data Sharing
-					</div>
-					<br>
-					<ul>
-						<li class="fragment spotlight"> AWS Bucket (20$ a month) </li>
-						<li class="fragment spotlight"> Migrating data between clusters </li>
-					</ul>
-				</section>
-				<section data-background-color="black">
-					City <span class="fragment highlight-blue"> mobility </span> across the urban hierarchy
 				</section>
 				<section data-background-color="black">
 					<div>
@@ -90,90 +85,20 @@
 				<section data-background-iframe="assets/2-04-2024/map_usa_clusters.html"  data-background-interactive> </section>
 				<section data-background-iframe="assets/2-04-2024/map_usa_clusters_all.html"  data-background-interactive> </section>
 				<section data-background-iframe="assets/2-04-2024/map_china.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/3-6-2024/growth_rate_by_size.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/3-6-2024/std_growth_rate_by_size.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/3-6-2024/zipf_fixed_cities.html"  data-background-interactive> </section>
 				<section data-background-color="black">
 					<div>
-						Matching clusters across time
+						Current work
 					</div>
 					<br>
 					<ul>
-						<li class="fragment spotlight"> Intersection network </li>
-						<li class="fragment spotlight"> Extract connected components </li>
+						<li class="fragment spotlight"> Adjust models of urban growth </li>
+						<li class="fragment spotlight"> Explain differences in decentralization across countries </li>
+						<li class="fragment spotlight"> Location and industrial composition of new cities </li>
 					</ul>
 				</section>
-				<section data-background-iframe="assets/2-04-2024/real_trajectories_1850_1940.html"  data-background-interactive> </section>
-				<section data-background-color="black">
-					<div>
-						Questions
-					</div>
-					<br>
-					<div>
-						<ul>
-							<li class="fragment spotlight"> Statistical regularities  </li>
-							<li class="fragment spotlight"> Individual trajectories </li>
-						</ul>
-					</div>
-				</section>
-				<section data-background-color="black">
-					<div>
-						Simon's model
-					</div>
-					<br>
-					<div>
-					<ul>
-						<li class="fragment spotlight"> Start with a collection of clumps (cities) </li>
-						<li class="fragment spotlight"> A new lump (firm) is generated and
-							<ul>
-								<li class="fragment spotlight"> Creates its own clump </li>
-								<li class="fragment spotlight"> Joins an existing clump </li>
-							</ul>
-						</li>
-					</ul>
-					</div>
-				</section>
-				<section data-background-iframe="assets/2-04-2024/preferential_attachment_1850_1940_constant_1000.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/preferential_attachment_1850_1940_constant_5000.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/std_cluster_growth_rate_by_size.html"  data-background-interactive> </section>
-				<section data-background-color="black">
-						<div>
-						Gabaix's model
-					</div>
-						<br>
-					<div>
-					<ul>
-						<li class="fragment spotlight"> City population $P_t$ </li>
-						<li class="fragment spotlight"> Growth rate $\gamma$ sampled from a distribution with mean $\mu$ and std $\sigma$ </li>
-						<li class="fragment spotlight"> $P_{t+1} = \gamma_{t} P_t$  </li>
-					</ul>
-					</div>
-				</section>
-				<section data-background-iframe="assets/2-04-2024/gabaix_1850_1940_std_1.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/gabaix_1850_1940_std_0.5.html"  data-background-interactive> </section>
-				<section data-background-color="black">
-					<div>
-							Variance estimation difficulties
-						</div>
-						<br>
-						<ul>
-							<li class="fragment spotlight"> Longitudinal variance </li>
-							<li class="fragment spotlight"> Cross-sectional variance </li>
-							<li class="fragment spotlight"> Uniform jump size </li>
-						</ul>
-				</section>
-				<section data-background-color="black">
-						<div>
-						Granular Simon Model
-						</div>
-						<br>
-						<div>
-						<ul>
-							<li class="fragment spotlight"> Preferential attachment </li>
-							<li class="fragment spotlight"> Power law distributed lumps </li>
-						</ul>
-						</div>
-				</section>
-				<section data-background-iframe="assets/2-04-2024/preferential_attachment_1850_1940_power_exp_2.0_1000.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/real_trajectories_1850_1940.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/std_cluster_growth_rate_by_size.html"  data-background-interactive> </section>
 		</div>
 
 		<script src="dist/reveal.js"></script>
