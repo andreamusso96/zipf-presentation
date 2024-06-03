@@ -38,9 +38,43 @@
 		<div class="reveal">
 			<div class="slides">
 				<section data-background-color="black">
-					Granular origins of <span class="fragment highlight-blue"> mobility </span> across the urban hierarchy
+				<span class="fragment highlight-blue">Sub-city </span> level productivity spillovers
 				</section>
-				<section data-background-iframe="assets/2-04-2024/real_trajectories_1850_1940.html"  data-background-interactive> </section>
+				<section data-background-color="white">
+					<div>
+						<img src="assets/2-04-2024/madison.png" width="50%">
+					</div>
+					<div class="fragment">
+						<img src="assets/2-04-2024/berlin.png" width="50%">
+					</div>
+					<div class="fragment">
+						<img src="assets/2-04-2024/silicon_valley.png" width="50%">
+					</div>
+				</section>
+				<section data-background-color="black">
+					<div>
+						Sub-city level datasets
+					</div>
+					<br>
+					<ul>
+						<li class="fragment spotlight"> Mobility: Spectus GPS traces 2019-2022 (SUN Lab) </li>
+						<li class="fragment spotlight"> Productivity: Dun & Bradstreet 2019-2022 (Growth Lab)</li>
+					</ul>
+				</section>
+				<section data-background-iframe="http://estebanmoro.org/categories/publications/"> </section>
+				<section data-background-color="black">
+					<div>
+						Obstacle: Data Sharing
+					</div>
+					<br>
+					<ul>
+						<li class="fragment spotlight"> AWS Bucket (20$ a month) </li>
+						<li class="fragment spotlight"> Migrating data between clusters </li>
+					</ul>
+				</section>
+				<section data-background-color="black">
+					City <span class="fragment highlight-blue"> mobility </span> across the urban hierarchy
+				</section>
 				<section data-background-color="black">
 					<div>
 						Data
@@ -56,24 +90,28 @@
 				<section data-background-iframe="assets/2-04-2024/map_usa_clusters.html"  data-background-interactive> </section>
 				<section data-background-iframe="assets/2-04-2024/map_usa_clusters_all.html"  data-background-interactive> </section>
 				<section data-background-iframe="assets/2-04-2024/map_china.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/zipf_china_1990.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/zipf_nigeria_2010.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/zipf_saudi_2020.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/zipf_plot_usa_1880.html"  data-background-interactive> </section>
 				<section data-background-color="black">
 					<div>
-						Literature on Zipf Law
+						Matching clusters across time
 					</div>
 					<br>
 					<ul>
-						<li class="fragment spotlight"> Something mechanical about urban growth </li>
-						<li class="fragment spotlight"> Random growth
-							<ul>
-								<li class="fragment spotlight"> Gabaix's multiplicative model </li>
-								<li class="fragment spotlight"> Simon's additive model </li>
-							</ul>
-						</li>
+						<li class="fragment spotlight"> Intersection network </li>
+						<li class="fragment spotlight"> Extract connected components </li>
 					</ul>
+				</section>
+				<section data-background-iframe="assets/2-04-2024/real_trajectories_1850_1940.html"  data-background-interactive> </section>
+				<section data-background-color="black">
+					<div>
+						Questions
+					</div>
+					<br>
+					<div>
+						<ul>
+							<li class="fragment spotlight"> Statistical regularities  </li>
+							<li class="fragment spotlight"> Individual trajectories </li>
+						</ul>
+					</div>
 				</section>
 				<section data-background-color="black">
 					<div>
@@ -91,41 +129,11 @@
 						</li>
 					</ul>
 					</div>
-					<br>
-					<div>
-					<img src="assets/2-04-2024/clumps.png" width="40%">
-					</div>
 				</section>
-				<section data-background-iframe="assets/2-04-2024/real_trajectories_1850_1940.html"  data-background-interactive> </section>
 				<section data-background-iframe="assets/2-04-2024/preferential_attachment_1850_1940_constant_1000.html"  data-background-interactive> </section>
 				<section data-background-iframe="assets/2-04-2024/preferential_attachment_1850_1940_constant_5000.html"  data-background-interactive> </section>
 				<section data-background-iframe="assets/2-04-2024/std_cluster_growth_rate_by_size.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/std_growth_rate_by_size_world.html"  data-background-interactive> </section>
 				<section data-background-color="black">
-					<div>
-						Granular origins of aggregate fluctuations
-					</div>
-					<br>
-					<ul>
-						<li class="fragment spotlight"> Macroeconomic fluctuations from grains </li>
-						<li class="fragment spotlight"> Firm distribution is power law </li>
-					</ul>
-				</section>
-				<section data-background-iframe="assets/2-04-2024/zipf_plot_usa_city_industry_1900.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/preferential_attachment_1850_1940_power_exp_2.0_1000.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/real_trajectories_1850_1940.html"  data-background-interactive> </section>
-				<section data-background-color="black">
-					<div>
-					Granular explanation
-					</div>
-					<br>
-					<ul>
-						<li class="fragment spotlight"> Economic activity comes in grains of various sizes </li>
-						<li class="fragment spotlight"> Small cities might capture big grains </li>
-					</ul>
-				</section>
-				<section>
-					<section data-background-color="black">
 						<div>
 						Gabaix's model
 					</div>
@@ -137,12 +145,10 @@
 						<li class="fragment spotlight"> $P_{t+1} = \gamma_{t} P_t$  </li>
 					</ul>
 					</div>
-					</section>
-					<section data-background-iframe="assets/2-04-2024/real_trajectories_1850_1940.html"  data-background-interactive> </section>
-					<section data-background-iframe="assets/2-04-2024/gabaix_1850_1940_std_1.html"  data-background-interactive> </section>
-					<section data-background-iframe="gluassets/2-04-2024/gabaix_1850_1940_std_0.5.html"  data-background-interactive> </section>
-
-					<section data-background-color="black">
+				</section>
+				<section data-background-iframe="assets/2-04-2024/gabaix_1850_1940_std_1.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/gabaix_1850_1940_std_0.5.html"  data-background-interactive> </section>
+				<section data-background-color="black">
 					<div>
 							Variance estimation difficulties
 						</div>
@@ -152,38 +158,22 @@
 							<li class="fragment spotlight"> Cross-sectional variance </li>
 							<li class="fragment spotlight"> Uniform jump size </li>
 						</ul>
-					</section>
 				</section>
 				<section data-background-color="black">
-					<section>
-					<div>
-						Implications
-					</div>
-					<br>
-					<ul>
-						<li class="fragment spotlight"> Big grains drive cities up the urban hierarchy  </li>
-						<li class="fragment spotlight"> Zipf exponents might depend on grain heterogeneity
-							<ul>
-								<li class="fragment spotlight"> Small grain variance $\rightarrow$ large Zipf exponent </li>
-								<li class="fragment spotlight"> Big grain variance $\rightarrow$ small Zipf exponents </li>
-							</ul>
-						</li>
-					</ul>
-					</section>
-					<section data-background-iframe="assets/gabaix/zipf_exponents.html"  data-background-interactive> </section>
+						<div>
+						Granular Simon Model
+						</div>
+						<br>
+						<div>
+						<ul>
+							<li class="fragment spotlight"> Preferential attachment </li>
+							<li class="fragment spotlight"> Power law distributed lumps </li>
+						</ul>
+						</div>
 				</section>
-				<section data-background-color="black">
-					<div>
-						Future work
-					</div>
-					<br>
-					<ul>
-						<li class="fragment spotlight"> Cross-country comparison of mobility  </li>
-						<li class="fragment spotlight"> Extending Simon to integrate agglomeration economies </li>
-					</ul>
-					</section>
-
-			</div>
+				<section data-background-iframe="assets/2-04-2024/preferential_attachment_1850_1940_power_exp_2.0_1000.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/real_trajectories_1850_1940.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/std_cluster_growth_rate_by_size.html"  data-background-interactive> </section>
 		</div>
 
 		<script src="dist/reveal.js"></script>
