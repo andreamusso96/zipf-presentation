@@ -38,27 +38,47 @@
 		<div class="reveal">
 			<div class="slides">
 				<section data-background-color="black">
-					<div>Proportional <span class="fragment highlight-blue"> city growth </span> and Zipf's law</div>
+					<div> Proportional growth and <span class="fragment highlight-blue"> Zipf's law </span></div>
 					<br>
 					<div>
 						<span class="fragment"> Andrea Musso, Dirk Helbing and Frank Neffke </span>
 					</div>
 				</section>
+				<section data-background-color="black">
+					<div>
+					Consider all the cities in a country
+					</div>
+					<br>
+					<ul>
+						<li class="fragment"> Rank cities: </li>
+						<ul>
+							<li class="fragment"> 1 = Largest City </li>
+							<li class="fragment"> 2 = 2nd Largest City </li>
+							<li class="fragment"> ... </li>
+						</ul>
+						<li class="fragment"> Plot logarithm of rank vs logarithm of population  </li>
+					</ul>
+				</section>
 				<section data-background-iframe="assets/2-04-2024/zipf_china_1990.html"  data-background-interactive> </section>
+				<section data-background-color="black">
+						\[ \log(\text{rank}) = \alpha + \beta \cdot \log(\text{pop}) \]
+					<span class="fragment">  \[ \beta = \text{Zipf exponent} \] </span>
+					<span class="fragment">  \[ \text{Zipf Law:} \quad \beta \approx -1 \] </span>
+				</section>
 				<section data-background-iframe="assets/2-04-2024/zipf_nigeria_2010.html"  data-background-interactive> </section>
 				<section data-background-iframe="assets/2-04-2024/zipf_saudi_2020.html"  data-background-interactive> </section>
 				<section data-background-iframe="assets/2-04-2024/zipf_plot_usa_1880.html"  data-background-interactive> </section>
 				<section data-background-color="black">
 					<div>
-					Explanation: <span class="fragment highlight-blue"> proportional growth </span>
+					Several socio-economic variables scale <span class="fragment highlight-blue"> non-linearly </span> with population
 					</div>
 					<br>
-					<div>
-						<span class="fragment"> $P_{t+1} = (1 + \gamma) \cdot P_t$  </span>
-					</div>
-					<div>
-						<span class="fragment"> $\gamma$ independent of $P$  </span>
-					</div>
+					<ul>
+						<li class="fragment"> Wages </li>
+						<li class="fragment"> Patents </li>
+						<li class="fragment"> Crime </li>
+						<li class="fragment"> ... </li>
+					</ul>
 				</section>
 				<section data-background-color="white">
 					<div class="fragment">
@@ -76,6 +96,23 @@
 				</section>
 				<section data-background-color="black">
 					<div>
+					Proportional Growth + Randomness
+					</div>
+					<br>
+					Population growth rate is <span class="fragment highlight-blue"> proportional </span> to current population
+					<ul>
+						<li class="fragment spotlight"> Preferential attachment (Simon) </li>
+						<ul>
+							<li class="fragment spotlight"> Every round new residents arrive </li>
+							<li class="fragment spotlight"> They move to a city proportionally to its size </li>
+							<li class="fragment spotlight"> They build a new city with small probability </li>
+						</ul>
+						<li class="fragment spotlight"> Random walks (Gabaix) </li>
+						<span class="fragment spotlight"> \[P_{t+1} = \gamma_t P_{t}, \ \gamma_t \ \text{random variable} \] </span>
+					</ul>
+				</section>
+				<section data-background-color="black">
+					<div>
 						Data
 					</div>
 					<br>
@@ -90,27 +127,27 @@
 				<section data-background-iframe="assets/2-04-2024/map_usa_clusters_all.html"  data-background-interactive> </section>
 				<section data-background-iframe="assets/2-04-2024/map_china.html"  data-background-interactive> </section>
 				<section data-background-color="black">
-						Re-evaluating <span class="fragment highlight-blue"> proportional growth </span>
+					Results
 				</section>
-				<section data-background-iframe="assets/3-6-2024/growth_rate_by_size_all_1000.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/3-6-2024/std_growth_rate_by_size.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/3-6-2024/effective_diversity_traded.html"  data-background-interactive> </section>
-				<section data-background-color="black">
-						Implications for <span class="fragment highlight-blue"> Zipf's law </span>
-				</section>
-				<section data-background-iframe="assets/3-6-2024/zipf_fixed_cities.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/3-6-2024/zipf_fixed_cities_2.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/growth_rate_by_size_1850.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/zipf_exponent_time.html"  data-background-interactive> </section>
 				<section data-background-color="black">
 					<div>
-						Current work
+						Distribution of city size is an equilibrium between
 					</div>
 					<br>
 					<ul>
-						<li class="fragment spotlight"> Adjust models of urban growth </li>
-						<li class="fragment spotlight"> Explain differences in decentralization across countries </li>
-						<li class="fragment spotlight"> Location and industrial composition of new cities </li>
+						<li class="fragment spotlight"> Concentration: Faster growth of large cities </li>
+						<li class="fragment spotlight"> Dispersion: Establishment of new cities </li>
 					</ul>
+					<br>
+					<br>
+					<div class="fragment">
+						Explain differences in population concentration across countries
+					</div>
 				</section>
+				<section data-background-iframe="assets/2-04-2024/zipf_saudi_2020.html"  data-background-interactive> </section>
+
 		</div>
 
 		<script src="dist/reveal.js"></script>
