@@ -37,129 +37,20 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-color="black">
-					<div> Proportional <span class="fragment highlight-blue"> city growth </span> and <span class="fragment highlight-blue"> Zipf's law </span></div>
-					<br>
-					<div>
-						<span class="fragment"> Andrea Musso, Dirk Helbing and Frank Neffke </span>
-					</div>
-				</section>
-				<section data-background-color="black">
-					<div>
-					Consider all the cities in a country
-					</div>
-					<br>
-					<ul>
-						<li class="fragment"> Rank cities: </li>
-						<ul>
-							<li class="fragment"> 1 = Largest City </li>
-							<li class="fragment"> 2 = 2nd Largest City </li>
-							<li class="fragment"> ... </li>
-						</ul>
-						<li class="fragment"> Plot logarithm of rank vs logarithm of population  </li>
-					</ul>
-				</section>
-				<section data-background-iframe="assets/2-04-2024/zipf_china_1990.html"  data-background-interactive> </section>
-				<section data-background-color="black">
-						\[ \log(\text{rank}) = \alpha + \beta \cdot \log(\text{pop}) \]
-					<span class="fragment">  \[ \beta = \text{Zipf exponent} \] </span>
-					<span class="fragment">  \[ \text{Zipf Law:} \quad \beta \approx -1 \] </span>
-				</section>
-				<section data-background-iframe="assets/2-04-2024/zipf_nigeria_2010.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/zipf_saudi_2020.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/zipf_plot_usa_1880.html"  data-background-interactive> </section>
-				<section data-background-color="black">
-					<div class="fragment">
-					Slope determines <span class="fragment highlight-blue"> concentration </span> of population
-					</div>
-					<br>
-					<div class="fragment">
-					Several socio-economic variables change <span class="fragment highlight-blue"> non-linearly </span> with population
-					</div>
-					<br>
-					<ul>
-						<li class="fragment"> Wages </li>
-						<li class="fragment"> Patents </li>
-						<li class="fragment"> Crime </li>
-						<li class="fragment"> ... </li>
-					</ul>
-				</section>
-				<section data-background-color="white">
-					<div class="fragment">
-						<img src="assets/3-6-2024/simon.png" width="40%">
-					</div>
-					<div class="fragment">
-						<img src="assets/3-6-2024/gabaix.png" width="40%">
-					</div>
-					<div class="fragment">
-						<img src="assets/3-6-2024/barthelemy.png" width="40%">
-					</div>
-					<div class="fragment">
-						<img src="assets/3-6-2024/bettencourt.png" width="40%">
-					</div>
-				</section>
-				<section data-background-color="black">
-					<div>
-					Proportional Growth + Randomness
-					</div>
-					<br>
-					Population growth rate is <span class="fragment highlight-blue"> proportional </span> to current population
-					<ul>
-						<li class="fragment spotlight"> Preferential attachment (Simon) </li>
-						<ul>
-							<li class="fragment spotlight"> Every round new residents arrive </li>
-							<li class="fragment spotlight"> They move to a city with probability proportionally to its size </li>
-							<li class="fragment spotlight"> They build a new city with small probability </li>
-						</ul>
-						<li class="fragment spotlight"> Random walks (Gabaix) </li>
-						<span class="fragment spotlight"> \[P_{t+1} = \gamma_t P_{t}, \ \gamma_t \ \text{random variable} \] </span>
-					</ul>
-				</section>
-				<section data-background-color="black">
-					<div>
-						Data
-					</div>
-					<br>
-					<ul>
-						<li class="fragment spotlight"> USA Cities 1850-1940 </li>
-						<li class="fragment spotlight"> Global Cities 1975-2030 </li>
-					</ul>
-				</section>
-				<section data-background-iframe="assets/2-04-2024/map_usa_places.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/map_usa_raster.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/map_usa_clusters.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/map_usa_clusters_all.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/map_china.html"  data-background-interactive> </section>
-				<section data-background-color="black">
-					Results
-				</section>
-				<section data-background-iframe="assets/2-04-2024/growth_rate_by_size_1850.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/26-7-2024/zipf_var_time.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/26-7-2024/zipf_var_urbanization.html"  data-background-interactive> </section>
 				<section data-background-iframe="assets/2-04-2024/zipf_exponent_time.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/26-7-2024/zipf_var_urbanization_change.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/26-7-2024/zipf_var_urbanization_level.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/26-7-2024/zipf_fixed_var_comparison.html"  data-background-interactive> </section>
 				<section data-background-iframe="assets/2-04-2024/zipf_exponent_time_both.html"  data-background-interactive> </section>
-				<section data-background-color="black">
-					<div>
-						The slope of the curve is an equilibrium between
-					</div>
-					<br>
-					<ul>
-						<li class="fragment spotlight"> Concentration: Faster growth of large cities </li>
-						<li class="fragment spotlight"> Dispersion: Establishment of new cities </li>
-					</ul>
-					<br>
-					<br>
-					<div class="fragment">
-						Explain differences in population concentration across countries
-					</div>
-				</section>
-				<section data-background-iframe="assets/2-04-2024/zipf_saudi_2020.html"  data-background-interactive> </section>
-				<section data-background-color="black">
-					<div> Contact </span></div>
-					<br>
-					<ul>
-						<li class="fragment"> Email: anmusso@ethz.ch </li>
-						<li class="fragment"> X: @andreamusso96 </li>
-					</ul>
-				</section>
+				<section data-background-iframe="assets/26-7-2024/new_clusters_urbanization.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/26-7-2024/urban_growth_vs_skew.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/26-7-2024/urban_pop_vs_skew.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/26-7-2024/urban_pop_vs_percentage_country_skewed.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/growth_rate_by_size_1850.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/26-7-2024/shift_share.html"  data-background-interactive> </section>
+
 
 		</div>
 
