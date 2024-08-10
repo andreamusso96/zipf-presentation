@@ -31,27 +31,224 @@
 				margin: 10px 0; /* Margin for spacing */
 				text-align: center; /* To center text inside the box */
 			  }
+			  * {
+				  box-sizing: border-box;
+				}
 
+				/* Create two equal columns that floats next to each other */
+				.column {
+				  float: left;
+				  width: 50%;
+				  padding: 0px;
+				  height: 300px; /* Should be removed. Only for demonstration */
+				}
+
+				/* Clear floats after the columns */
+				.row:after {
+				  content: "";
+				  display: table;
+				  clear: both;
+				}
 		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-iframe="assets/26-7-2024/zipf_var_time.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/26-7-2024/zipf_var_urbanization.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/zipf_exponent_time.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/26-7-2024/zipf_var_urbanization_change.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/26-7-2024/zipf_var_urbanization_level.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/26-7-2024/zipf_fixed_var_comparison.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/zipf_exponent_time_both.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/26-7-2024/new_clusters_urbanization.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/26-7-2024/urban_growth_vs_skew.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/26-7-2024/urban_pop_vs_skew.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/26-7-2024/urban_pop_vs_percentage_country_skewed.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/2-04-2024/growth_rate_by_size_1850.html"  data-background-interactive> </section>
-				<section data-background-iframe="assets/26-7-2024/shift_share.html"  data-background-interactive> </section>
+				<section data-background-color="black">
+					<div> Rising <span class="fragment highlight-blue"> spatial inequality </span> across countries and time</div>
+					<br>
+					<div>
+						<span class="fragment"> Andrea Musso, Dirk Helbing and Frank Neffke </span>
+					</div>
+				</section>
+				<section data-background-color="black">
+					<div class="row">
+					  <div class="column">
+						  <div>
+						  <span class="fragment highlight-blue"> Wealth </span> Inequality
+						  </div>
+						  <br>
+						<ul>
+							<li class="fragment"> Money </li>
+							<li class="fragment"> People </li>
+						</ul>
+					  </div>
+						<div>
+						  <span class="fragment highlight-blue"> Spatial </span> Inequality
+						  </div>
+						<br>
+					  <div class="column">
+						<ul>
+							<li class="fragment"> People </li>
+							<li class="fragment"> Places </li>
+						</ul>
+					  </div>
+					</div>
+				</section>
+				<section data-background-color="black">
+					<div> Spatial Inequality affects a range of other inequalities </div>
+					<br>
+					<ul>
+						<li class="fragment">  Wages </li>
+						<li class="fragment">  Opportunity </li>
+						<li class="fragment">  Crime Rates </li>
+						<li class="fragment">  Disease Contagion </li>
+						<li class="fragment">  ... </li>
+					</ul>
+				</section>
+				<section data-background-color="white">
+					<div class="fragment">
+						<img src="assets/9-8-2024/Economics_Gini_coefficient2.svg" width="60%">
+					</div>
+				</section>
+				<section data-background-color="black">
+					<div>
+					Consider all the cities in a country
+					</div>
+					<br>
+					<ul>
+						<li class="fragment"> Rank cities: </li>
+						<ul>
+							<li class="fragment"> 1 = Largest City </li>
+							<li class="fragment"> 2 = 2nd Largest City </li>
+							<li class="fragment"> ... </li>
+						</ul>
+						<li class="fragment"> Plot logarithm of rank vs logarithm of population  </li>
+					</ul>
+				</section>
+				<section data-background-iframe="assets/2-04-2024/zipf_china_1990.html"  data-background-interactive> </section>
+				<section data-background-color="black">
+						\[ \log(\text{rank}) = \alpha + \beta \cdot \log(\text{pop}) \]
+					<span class="fragment">  \[ \beta = \text{Zipf exponent} \] </span>
+					<span class="fragment">  \[ \text{Zipf Law:} \quad \beta \approx -1 \] </span>
+				</section>
+				<section data-background-color="black">
+					How does <span class="fragment highlight-blue"> spatial inequality </span> differ between countries?
+				</section>
+				<section data-background-iframe="assets/9-8-2024/gini_index_distribution.html"  data-background-interactive> </section>
+				<section data-background-color="black">
+					<div>
+					Two theories have underpinned our understanding of urbanization
+					</div>
+					<br>
+					<ul>
+						<li class="fragment spotlight"> Zipf's Law </li>
+						<li class="fragment spotlight"> Proportional Growth  </li>
+					</ul>
+				</section>
+				<section data-background-iframe="assets/2-04-2024/zipf_nigeria_2010.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/zipf_saudi_2020.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/zipf_plot_usa_1880.html"  data-background-interactive> </section>
+				<section data-background-color="white">
+					<div class="fragment">
+						<img src="assets/3-6-2024/simon.png" width="40%">
+					</div>
+					<div class="fragment">
+						<img src="assets/3-6-2024/gabaix.png" width="40%">
+					</div>
+					<div class="fragment">
+						<img src="assets/3-6-2024/barthelemy.png" width="40%">
+					</div>
+					<div class="fragment">
+						<img src="assets/3-6-2024/bettencourt.png" width="40%">
+					</div>
+				</section>
+				<section data-background-color="black">
+					<div>
+					Population growth is <span class="fragment highlight-blue"> proportional </span> to current population
+					</div>
+					<br>
+					<ul>
+						<li class="fragment spotlight"> Preferential attachment (Simon) </li>
+						<ul>
+							<li class="fragment spotlight"> Every round new residents arrive </li>
+							<li class="fragment spotlight"> They move to a city with probability proportionally to its size </li>
+							<li class="fragment spotlight"> They build a new city with small probability </li>
+						</ul>
+						<li class="fragment spotlight"> Random walks (Gabaix) </li>
+						<span class="fragment spotlight"> \[P_{t+1} = \gamma_t P_{t}, \ \gamma_t \ \text{random variable} \] </span>
+					</ul>
+				</section>
+				<section data-background-color="black">
+					<ul>
+						<li class="fragment spotlight"> Spatial inequality does not change across time (Proportional Growth) </li>
+						<li class="fragment"> Countries should have similar levels of spatial inequality (Zipf's Law)  </li>
+					</ul>
+				</section>
+				<section data-background-iframe="assets/9-8-2024/gini_index_distribution.html"  data-background-interactive> </section>
+				<section data-background-color="black">
+					<div>
+						Data
+					</div>
+					<br>
+					<ul>
+						<li class="fragment spotlight"> USA Cities 1850-1940 </li>
+						<li class="fragment spotlight"> Global Cities 1975-2030 </li>
+					</ul>
+				</section>
+				<section data-background-iframe="assets/2-04-2024/map_usa_places.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/map_usa_raster.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/map_usa_clusters.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/map_usa_clusters_all.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/2-04-2024/map_china.html"  data-background-interactive> </section>
+				<section data-background-color="black">
+					Results
+				</section>
+				<section data-background-iframe="assets/9-8-2024/gini_index_vs_urban_population_share.html"  data-background-interactive> </section>
+				<section data-background-color="black">
+					Pace of urbanization
+					\[ \dot{u} = \gamma_u - \gamma_c \]
+					<div class="fragment">
+					$\gamma_u$ = Urban population growth
+					</div>
+					<div class="fragment">
+					$\gamma_c$ = Country population growth
+					</div>
+				</section>
+				<section data-background-color="black">
+					Divergence coefficient
+					\[ P_{t+1} = aP_t^d \]
+					<div class="fragment">
+					$d > 1$ = Divergence
+					</div>
+					<div class="fragment">
+					$d < 1$ = Convergence
+					</div>
+				</section>
+				<section data-background-color="white">
+					<div>
+						<img src="assets/9-8-2024/divergence_table.png" width="80%">
+					</div>
+				</section>
+				<section data-background-iframe="assets/9-8-2024/gini_index_vs_urban_population_share.html"  data-background-interactive> </section>
+				<section data-background-iframe="assets/9-8-2024/gini_index_vs_max_urbanization_pace.html"  data-background-interactive> </section>
+				<section data-background-color="black">
+					Why does <span class="fragment highlight-blue"> urbanization </span> produce <span class="fragment highlight-blue"> divergent growth </span>?
+				</section>
+				<section data-background-color="white">
+				  <div>
+					<img src="assets/9-8-2024/migration_flows.png" width="100%">
+				  </div>
+				</section>
+				<section data-background-color="black">
+					Exposure to industry growth
+					\[E_{cit} = \sum_{i}\gamma_{it} \cdot s_{cit} \]
+					<div class="fragment">
+					$\gamma_{it}$ = Growth of industry $i$ from $t$ to $t+1$
+					</div>
+					<div class="fragment">
+					$s_{ct}$ = Share of city $c$'s workers in industry $i$ at time $t$
+					</div>
+				</section>
+				<section data-background-color="white">
+					<div>
+						<img src="assets/9-8-2024/shift_share_table.png" width="80%">
+					</div>
+				</section>
+				<section data-background-iframe="assets/9-8-2024/scaling_exponent_by_industry_growth.html"  data-background-interactive> </section>
+				<section>
 
-
+				</section>
 		</div>
 
 		<script src="dist/reveal.js"></script>
